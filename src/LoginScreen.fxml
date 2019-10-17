@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginScreenController">
    <children>
-      <TextField fx:id="usernameField" layoutX="226.0" layoutY="134.0" />
-      <TextField fx:id="passwordField" layoutX="226.0" layoutY="200.0" />
-      <Button fx:id="loginButton" layoutX="484.0" layoutY="327.0" mnemonicParsing="false" text="Enter" />
-      <Label fx:id="errorLabel" layoutX="14.0" layoutY="369.0" text="Label" />
+      <TextField fx:id="username" layoutX="226.0" layoutY="134.0" prefHeight="35.0" prefWidth="161.0" />
+      <Button fx:id="loginButton" layoutX="253.0" layoutY="260.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="35.0" prefWidth="94.0" text="Enter" />
+      <Text layoutX="134.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="69.240234375">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="134.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="69.240234375">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="password" layoutX="226.0" layoutY="200.0" prefHeight="35.0" prefWidth="161.0" />
+      <Text fill="#cd0acd" layoutX="258.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indiefy">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

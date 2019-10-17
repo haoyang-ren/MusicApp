@@ -59,11 +59,14 @@ public class Database {
         String createStatement = "CREATE TABLE IF NOT EXISTS USER "
                 + "(ID INTEGER PRIMARY KEY autoincrement, "
                 + "USERNAME TEXT NOT NULL, "
-                + "PASSWORD TEXT NOT NULL, "
+                + "PASSWORD TEXT NOT NULL"
                 + ");";
-        System.out.println(createStatement);
+        //System.out.println(createStatement);
 
         st.execute(createStatement);
+        String inserQuery = "INSERT OR IGNORE INTO USER (ID, USERNAME,PASSWORD) "
+                +"VALUES (1, 'Pretentious', 'Hipster');";
+        st.execute(inserQuery);
         //cleanup code (close statement and connection objects)
         st.close();
         conn.close();
@@ -85,7 +88,7 @@ public class Database {
                 + "GENRE TEXT NOT NULL, "
                 + "YEAR TEXT NOT NULL"
                 + ");";
-        System.out.println(createStatement);
+        //System.out.println(createStatement);
 
         st.execute(createStatement);
         //cleanup code (close statement and connection objects)

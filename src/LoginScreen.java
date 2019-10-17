@@ -31,8 +31,6 @@ public class LoginScreen extends Application { //TODO: What class do you need to
        Database.createLoginTable();
        Database.createMusicTable();
        
-       
-       
     }
     
 }

@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-    
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MusicListController">
+   <children>
+      <TableView fx:id="musicList" layoutX="40.0" layoutY="60.0" onSort="#initialize" prefHeight="280.0" prefWidth="520.0">
+        <columns>
+          <TableColumn fx:id="albumColumn" prefWidth="130.0" text="Album" />
+          <TableColumn fx:id="artistColumn" prefWidth="130.0" text="Artist" />
+            <TableColumn fx:id="genreColumn" prefWidth="130.0" text="Genre" />
+            <TableColumn fx:id="yearColumn" prefWidth="130.0" text="Year" />
+        </columns>
+      </TableView>
+      <Text fill="#c30ccf" layoutX="269.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Music List">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Text>
+   </children>
 </AnchorPane>
-
